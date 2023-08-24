@@ -1,5 +1,6 @@
 import { parseArgs } from "node:util";
-import { EncryptionService, Cipher, ciphers } from "../lib";
+import { randomBytes } from "node:crypto";
+import { Cipher, ciphers } from "../lib/encryption.ciphers";
 
 const {
 	values: { cipher },
@@ -19,6 +20,9 @@ if (!ciphers[cipher as Cipher]) {
 	console.error(
 		`The provided cipher "${cipher}" is not supported. Supported ciphers are: ${supportedCiphers}`,
 	);
+	process.exit(1);
 }
 
-console.log(EncryptionService.generateKey(cipher as Cipher));
+console.log(
+	randomBytes(ciphers[cipher as Cipher].keyLength).toString("base64"),
+);
