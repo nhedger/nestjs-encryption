@@ -5,7 +5,7 @@
 		"provenance": true
 	},
 	"type": "module",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"description": "Encryption Module for NestJS.",
 	"author": {
 		"name": "Nicolas Hedger",
@@ -19,7 +19,11 @@
 		"url": "git+https://github.com/nhedger/nestjs-encryption.git"
 	},
 	"bugs": "https://github.com/nhedger/nestjs-encryption/issues",
-	"keywords": ["nestjs", "encryption", "crypto"],
+	"keywords": [
+		"nestjs",
+		"encryption",
+		"crypto"
+	],
 	"sideEffects": false,
 	"exports": {
 		".": {
@@ -33,10 +37,15 @@
 	"types": "./dist/lib/index.d.ts",
 	"typesVersions": {
 		"*": {
-			"*": ["./dist/lib/*", "./dist/lib/index.d.ts"]
+			"*": [
+				"./dist/lib/*",
+				"./dist/lib/index.d.ts"
+			]
 		}
 	},
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"bin": {
 		"nestjs-encryption-keygen": "./dist/cli/keygen.mjs"
 	},
