@@ -1,0 +1,6 @@
+pre-commit:
+  commands:
+    format:
+      run: pnpm exec -- rome format --write . && git add {staged_files}
+    lint:
+      run: pnpm exec -- rome check .
