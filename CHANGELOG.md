@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.3](https://github.com/nhedger/nestjs-encryption/compare/v0.1.2...v0.1.3) (2023-08-24)
+
+
+### Bug Fixes
+
+* cannot load module ([26d45ab](https://github.com/nhedger/nestjs-encryption/commit/26d45abcbbe8d7618d7401b2dea1c6cedb993093))
+
 ## [0.1.2](https://github.com/nhedger/nestjs-encryption/compare/v0.1.1...v0.1.2) (2023-08-24)
 
 
