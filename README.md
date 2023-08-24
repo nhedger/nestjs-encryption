@@ -25,7 +25,8 @@ pnpm add @hedger/nestjs-encryption
 ## Setup
 
 Setting up the module inside your NestJS application is a matter of registering
-the module within your `AppModule`.
+the module within your `AppModule`. The module is registered globally by default
+and can be used anywhere in your application.
 
 You may use either the `register` or `registerAsync` method to register the module in your `AppModule`.
 
