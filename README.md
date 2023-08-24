@@ -1,6 +1,6 @@
 # NestJS Encryption Module
 
-**NestJS Encrytion** is NestJS 9+ module that provides _plug-and-play_ encryption
+**NestJS Encrytion** is a NestJS 9+ module that provides _plug-and-play_ encryption
 and decryption functionality to your NestJS application.
 
 -   Uses `AES-256-CBC` by default, but supports [other ciphers](#supported-ciphers) as well.
