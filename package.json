@@ -56,7 +56,7 @@
 		"lint": "rome check .",
 		"test": "vitest",
 		"typecheck": "tsc --noEmit",
-		"postinstall": "lefthook install"
+		"prepare": "lefthook install"
 	},
 	"devDependencies": {
 		"@nestjs/common": "^10.2.1",
