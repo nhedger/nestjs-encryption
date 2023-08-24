@@ -16,7 +16,7 @@ export const { ConfigurableModuleClass, MODULE_OPTIONS_TOKEN } =
 			(definition, extras) => ({
 				...definition,
 				global: extras.global,
-			})
+			}),
 		)
 		.build();
 
