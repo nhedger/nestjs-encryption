@@ -3,7 +3,7 @@
 **NestJS Encrytion** is a NestJS 9+ module that provides _plug-and-play_ encryption
 and decryption functionality to your NestJS application.
 
--   Uses `AES-256-CBC` by default, but supports [other ciphers](#supported-ciphers) as well.
+-   Uses `aes-256-cbc` by default, but supports [other ciphers](#supported-ciphers) as well.
 -   Provides a keygen (API and CLI) for generating random and secure encryption keys.
 -   Thoroughly tested.
 
@@ -28,18 +28,18 @@ Setting up the module inside your NestJS application is a matter of registering
 the module within your `AppModule`. The module is registered globally by default
 and can be used anywhere in your application.
 
-You may use either the `register` or `registerAsync` method to register the module in your `AppModule`.
+You may use either the `forRoot` or `forRootAsync` method to register the module in your `AppModule`.
 
-### Using `register`
+### Using `forRoot`
 
-The `register` method is the simplest way to register the module.
+The `forRoot` method is the simplest way to register the module.
 
 ```typescript
 import { EncryptionModule, Cipher } from "@hedger/nestjs-encryption";
 
 @Module({
 	imports: [
-		EncryptionModule.register({
+		EncryptionModule.forRoot({
 			key: process.env.APP_KEY,
 			cipher: Cipher.AES_256_CBC,
 		}),
@@ -48,9 +48,9 @@ import { EncryptionModule, Cipher } from "@hedger/nestjs-encryption";
 export class AppModule {}
 ```
 
-### Using `registerAsync`
+### Using `forRootAsync`
 
-The `registerAsync` method allows you to register the module asynchronously,
+The `forRootAsync` method allows you to register the module asynchronously,
 optionally resolving the encryption key from a configuration service. Here's
 an example that uses the `ConfigService` from `@nestjs/config` to resolve the
 encryption key from the `APP_KEY` environment variable.
@@ -61,11 +61,12 @@ import { EncryptionModule, Cipher } from "@hedger/nestjs-encryption";
 
 @Module({
 	imports: [
-		ConfigModule.forRoot(),
-		EncryptionModule.registerAsync({
-			useFactory: (config: ConfigService) => ({
-				key: config.get("APP_KEY"),
-				cipher: Cipher.AES_256_CBC,
+		ConfigModule.forRoot({
+			isGlobal: true,
+		}),
+		EncryptionModule.forRootAsync({
+			useFactory: (configService: ConfigService) => ({
+				key: configService.get<string>("APP_KEY"),
 			}),
 			inject: [ConfigService],
 		}),
