@@ -19,11 +19,7 @@
 		"url": "git+https://github.com/nhedger/nestjs-encryption.git"
 	},
 	"bugs": "https://github.com/nhedger/nestjs-encryption/issues",
-	"keywords": [
-		"nestjs",
-		"encryption",
-		"crypto"
-	],
+	"keywords": ["nestjs", "encryption", "crypto"],
 	"sideEffects": false,
 	"exports": {
 		".": {
@@ -37,15 +33,10 @@
 	"types": "./dist/lib/index.d.ts",
 	"typesVersions": {
 		"*": {
-			"*": [
-				"./dist/lib/*",
-				"./dist/lib/index.d.ts"
-			]
+			"*": ["./dist/lib/*", "./dist/lib/index.d.ts"]
 		}
 	},
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"bin": {
 		"nestjs-encryption-keygen": "./dist/cli/keygen.mjs"
 	},
@@ -55,7 +46,8 @@
 		"format": "rome format --write .",
 		"lint": "rome check .",
 		"test": "vitest",
-		"typecheck": "tsc --noEmit"
+		"typecheck": "tsc --noEmit",
+		"postinstall": "lefthook install"
 	},
 	"devDependencies": {
 		"@nestjs/common": "^10.2.1",
