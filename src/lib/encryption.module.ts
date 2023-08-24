@@ -11,11 +11,11 @@ export const { ConfigurableModuleClass, MODULE_OPTIONS_TOKEN } =
 	new ConfigurableModuleBuilder<EncryptionModuleOptions>()
 		.setExtras(
 			{
-				isGlobal: true,
+				global: true,
 			},
 			(definition, extras) => ({
 				...definition,
-				global: extras.isGlobal,
+				global: extras.global,
 			})
 		)
 		.build();
