@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/nhedger/nestjs-encryption/compare/v0.1.1...v0.1.2) (2023-08-24)
+
+
+### Bug Fixes
+
+* **lib:** global module registration ([1d31f74](https://github.com/nhedger/nestjs-encryption/commit/1d31f740393a417ec8416facb9e182e33c3c5325))
+
 ## [0.1.1](https://github.com/nhedger/nestjs-encryption/compare/v0.1.0...v0.1.1) (2023-08-24)
 
 
