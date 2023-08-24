@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.4](https://github.com/nhedger/nestjs-encryption/compare/v0.1.3...v0.1.4) (2023-08-24)
+
+
+### Bug Fixes
+
+* use `prepare` instead of `postinstall` ([49c53f3](https://github.com/nhedger/nestjs-encryption/commit/49c53f38155de4360125d2ed69dc5969f8aacd6a))
+
 ## [0.1.3](https://github.com/nhedger/nestjs-encryption/compare/v0.1.2...v0.1.3) (2023-08-24)
 
 
