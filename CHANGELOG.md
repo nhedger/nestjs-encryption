@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.5](https://github.com/nhedger/nestjs-encryption/compare/v0.1.4...v0.1.5) (2023-08-24)
+
+
+### Miscellaneous Chores
+
+* trigger release ([6b11ba7](https://github.com/nhedger/nestjs-encryption/commit/6b11ba738742a06f69894a86cc2599855d8eb21f))
+
 ## [0.1.4](https://github.com/nhedger/nestjs-encryption/compare/v0.1.3...v0.1.4) (2023-08-24)
 
 
