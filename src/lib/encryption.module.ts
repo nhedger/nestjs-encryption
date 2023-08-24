@@ -9,9 +9,15 @@ export interface EncryptionModuleOptions {
 
 export const { ConfigurableModuleClass, MODULE_OPTIONS_TOKEN } =
 	new ConfigurableModuleBuilder<EncryptionModuleOptions>()
-		.setExtras({
-			global: true,
-		})
+		.setExtras(
+			{
+				isGlobal: true,
+			},
+			(definition, extras) => ({
+				...definition,
+				global: extras.isGlobal,
+			})
+		)
 		.build();
 
 @Global()
