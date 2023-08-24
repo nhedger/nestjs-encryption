@@ -8,10 +8,8 @@ import {
 	timingSafeEqual,
 } from "node:crypto";
 import { UnableToDecrypt, UnableToInitialize } from "./encryption.errors";
-import {
-	MODULE_OPTIONS_TOKEN,
-	type EncryptionModuleOptions,
-} from "./encryption.module";
+import type { EncryptionModuleOptions } from "./encryption.module";
+import { MODULE_OPTIONS_TOKEN } from "./encryption.module-definition";
 
 /**
  * Authenticated Encryption with Associated Data Payload

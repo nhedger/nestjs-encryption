@@ -1,26 +1,13 @@
+import { Module } from "@nestjs/common";
 import type { Cipher } from "./encryption.ciphers";
 import { EncryptionService } from "./encryption.service";
-import { ConfigurableModuleBuilder, Global, Module } from "@nestjs/common";
+import { ConfigurableModuleClass } from "./encryption.module-definition";
 
 export interface EncryptionModuleOptions {
 	key: string;
 	cipher?: Cipher;
 }
 
-export const { ConfigurableModuleClass, MODULE_OPTIONS_TOKEN } =
-	new ConfigurableModuleBuilder<EncryptionModuleOptions>()
-		.setExtras(
-			{
-				global: true,
-			},
-			(definition, extras) => ({
-				...definition,
-				global: extras.global,
-			}),
-		)
-		.build();
-
-@Global()
 @Module({
 	providers: [EncryptionService],
 	exports: [EncryptionService],
