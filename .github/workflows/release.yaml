@@ -16,7 +16,7 @@ jobs:
     steps:
       - id: release
         name: Run release-please
-        uses: google-github-actions/release-please-action@v3.7.11
+        uses: googleapis/release-please-action@v3.7.11
         with:
           release-type: node
           package-name: "@hedger/nestjs-encryption"
