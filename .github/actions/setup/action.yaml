@@ -4,9 +4,9 @@ runs:
   using: composite
   steps:
     - name: Set up Node
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v3.9.1
       with:
-        node-version: 20
+        node-version: 20.20.2
     - name: Set up pnpm
       uses: pnpm/action-setup@v2.2.4
       with:
@@ -16,7 +16,7 @@ runs:
       id: pnpm-cache
       shell: bash
       run: echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
-    - uses: actions/cache@v3
+    - uses: actions/cache@v3.5.0
       name: Setup pnpm cache
       with:
         path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
